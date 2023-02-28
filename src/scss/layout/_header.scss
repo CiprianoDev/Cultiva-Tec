@@ -1,3 +1,61 @@
-body{
-    background-color: blueviolet;
+.barra-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .texto-logo{
+        font-size: 2.4rem;
+        margin-left: 5rem;
+        color: $negro;
+    }
+
+    .texto-logo_bold{
+        font-weight: $bold;
+    }
+
+    .enlace{
+        margin-right: 2rem;
+        font-size: 1.8rem;
+        color: $negro;
+    }
+
+    .barra-header_usuario{
+        img {
+            width: 5rem;
+            margin: 0 5rem;
+        }
+    }
+
+    
 }
+
+.barra-header_navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url(../../../build/img/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+
+    .titulo-header_texto{
+        color: $blanco;
+        font-size: 8rem;
+        margin: 0;
+    }
+
+    .titulo-header_slogan{
+        color: $blanco;
+        font-size: 5rem;
+        text-align: center;
+        margin: 0 0 15rem 0 ;
+    }
+}
+
+

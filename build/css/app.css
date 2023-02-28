@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;700;900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -369,6 +369,53 @@ h4 {
 }
 
 /** UI **/
-body {
-  background-color: blueviolet;
+.barra-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.barra-header .texto-logo {
+  font-size: 2.4rem;
+  margin-left: 5rem;
+  color: #000000;
+}
+.barra-header .texto-logo_bold {
+  font-weight: 700;
+}
+.barra-header .enlace {
+  margin-right: 2rem;
+  font-size: 1.8rem;
+  color: #000000;
+}
+.barra-header .barra-header_usuario img {
+  width: 5rem;
+  margin: 0 5rem;
+}
+
+.barra-header_navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url(../../../build/img/fondo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 60rem;
+}
+.titulo-header .titulo-header_texto {
+  color: #FFFFFF;
+  font-size: 8rem;
+  margin: 0;
+}
+.titulo-header .titulo-header_slogan {
+  color: #FFFFFF;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0 0 15rem 0;
 }
