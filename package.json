@@ -1,12 +1,12 @@
 {
-  "name": "app-salon-html-mvc-sass-s",
+  "name": "cultiva-tec",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "gulp"
   },
-  "author": "",
+  "author": "Gabriel Cipriano, Enrique Gonzalez, Dowson Cortes, Ahuitz Arias",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
