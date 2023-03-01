@@ -1,0 +1,19 @@
+.header-imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .titulo{
+        color: $blanco;
+        font-size: 7rem;
+        margin-bottom: 1rem;
+    }
+
+    .titulo-slogan{
+        color: $blanco;
+        font-size: 4rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+

@@ -1,0 +1,68 @@
+.introduccion {
+    padding: 0 5rem;
+    margin-top: 5rem;
+     @include desktop{
+        padding: 0 10rem;
+     }
+    .introduccion-texto {
+        font-size: 1.8rem;
+        text-align: justify;
+    }
+}
+
+.ventaja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 4rem;
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+    max-width: 30rem;
+    height: 9.8rem;
+    @include tablet{
+        max-width: 30rem;
+        border-radius: 2rem;
+        
+    }
+
+    @include desktop{
+        max-width: 40rem;
+
+    }
+    
+    .ventaja-icono{
+        width: 5rem;
+    }
+
+    .ventaja-texto{
+        margin-left: 4rem;
+        font-size: 1.4rem;
+        width: 25rem;
+        @include tablet{
+            width: 38rem;
+            font-size: 1.8rem;
+        }
+    }
+
+}
+
+.contenedor-ventajas{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet{
+        @include grid(2,1rem);
+    }
+    
+    @include desktop{
+        
+        margin-top: 5rem;
+        padding: 0 10rem;
+    }
+
+    
+
+   
+}
