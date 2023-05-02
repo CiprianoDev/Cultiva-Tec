@@ -22,10 +22,11 @@ $router->post('/auth', function() {
         header('Location: /login');
         //die();
     }
-
-    $usuario = new Usuario();
-    $usuario->__set('usuario_nombre', $usuario_nombre);
-    $contra = $usuario->getUsuarioContra()[0]['usuario_contra'];
+    $usuario = new Usuario($usuario_nombre, $usuario_contra);
+    $usuario->validarUsuario();
+/*
+    $usuario = new Usuario($usuario_nombre, $usuario_contra);
+    $contra = $usuario->getUsuarioContra();
 
     // echo 'Nombre: ' . $usuario->__get('usuario_nombre') . "<br>";
     // echo 'Contra: ' . $contra;
@@ -38,7 +39,7 @@ $router->post('/auth', function() {
         //echo "Bienvenido";
     } else {
         echo "no eres bienvenido";
-    }
+    }*/
     //require 'code/login.php';
 });
 

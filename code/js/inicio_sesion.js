@@ -16,7 +16,7 @@ formulario.addEventListener('submit', (e) => {
     
 
     console.log("Valido");
-    fetch('auth', {
+    fetch('/auth', {
         method: 'POST',
         body: datosFormulario
     })

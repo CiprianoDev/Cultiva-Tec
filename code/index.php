@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/code/build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <title>Cultiva-Tec</title>
 </head>
@@ -59,42 +59,42 @@
             <div class="contenedor-ventajas">
                 <div class="ventaja">
 
-                    <img class="ventaja-icono" src="/code/build/img/icono_dinero.svg" alt="icono dinero">
+                    <img class="ventaja-icono" src="/build/img/icono_dinero.svg" alt="icono dinero">
                     <p class="ventaja-texto">Disminuir los costos</p>
 
                 </div>
 
                 <div class="ventaja">
 
-                    <img class="ventaja-icono" src="/code/build/img/icono_lista.svg" alt="icono dinero">
+                    <img class="ventaja-icono" src="/build/img/icono_lista.svg" alt="icono dinero">
                     <p class="ventaja-texto">Cumplir con las especificaciones</p>
 
                 </div>
 
                 <div class="ventaja">
 
-                    <img class="ventaja-icono" src="/code/build/img/icono_salud.svg" alt="icono dinero">
+                    <img class="ventaja-icono" src="/build/img/icono_salud.svg" alt="icono dinero">
                     <p class="ventaja-texto">Proteger la salud publica</p>
 
                 </div>
 
                 <div class="ventaja">
 
-                    <img class="ventaja-icono" src="/code/build/img/icono_check.svg" alt="icono dinero">
+                    <img class="ventaja-icono" src="/build/img/icono_check.svg" alt="icono dinero">
                     <p class="ventaja-texto">Mayor eficiencia en el comercio</p>
  
                 </div>
 
                 <div class="ventaja">
 
-                    <img class="ventaja-icono" src="/code/build/img/icono_caja.svg" alt="icono dinero">
+                    <img class="ventaja-icono" src="/build/img/icono_caja.svg" alt="icono dinero">
                     <p class="ventaja-texto">Transparencia en el comercio</p>
 
                 </div>
 
                 <div class="ventaja">
 
-                    <img class="ventaja-icono" src="/code/build/img/icono_medalla.svg" alt="icono dinero">
+                    <img class="ventaja-icono" src="/build/img/icono_medalla.svg" alt="icono dinero">
                     <p class="ventaja-texto">Garantizar la calidad</p>
 
                 </div>

@@ -1,5 +1,5 @@
 <?php
-
+/*
 namespace Tec\CultivaTec\functions;
 
 use Tec\CultivaTec\classes\Usuario;
@@ -20,7 +20,7 @@ use Tec\CultivaTec\classes\Usuario;
     $usuario = new Usuario();
     $usuario->__set('usuario_nombre', $usuario_nombre);
     echo $user->__get('usuario_nombre');
-    $contra = $usuario->getUsuarioContra()[0]['usuario_contra'];
+    $contra = $usuario->getUsuarioContra();
 
     if (password_verify($usuario_contra, $contra)) {
         session_start();
@@ -35,3 +35,4 @@ use Tec\CultivaTec\classes\Usuario;
 // } else {
 //     echo "No";
 // }
+*/
