@@ -1,0 +1,28 @@
+{
+    "name": "tec/cultiva-tec",
+    "description": "Sitio web sobre las normas mexicanas para la importación y exportación de frutas",
+    "license": "ISC",
+    "autoload": {
+        "psr-4": {
+            "Tec\\CultivaTec\\": "code/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enrique González Aquino"
+        },
+        {
+            "name": "Gabriel Cipriano Lara"
+        },
+        {
+            "name": "Dowson Geovanni González Cortes"
+        },
+        {
+            "name": "Ahuitz Arias Martinez"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "bramus/router": "^1.6"
+    }
+}

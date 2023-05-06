@@ -1,1 +1,4 @@
 /node_modules
+/vendor
+/code/config/.env
+php-error.log
