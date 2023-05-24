@@ -1,0 +1,51 @@
+table.frutas{
+    width: 100%;
+    border-spacing: 0.2rem;
+    margin-bottom: 4rem;
+    thead{
+        background-color: $principal;
+        
+        th{
+            color: $blanco;
+            padding: 2rem;
+            
+        }
+
+        
+    }
+
+    .opciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: capitalize;
+    }
+
+    td{
+        
+        text-align: center;
+        text-transform: uppercase;
+        .imagen-tabla{
+            width: 10rem;
+            
+        }
+    }
+
+    .imagen{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .linea {
+        border-bottom: 1px solid #ccc;
+    }
+    
+}
+
+.imagen-small{
+    width: 20rem;
+}
+
+.administrador__titulo{
+    color: $secundario;
+}

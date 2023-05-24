@@ -1,107 +1,99 @@
-nav{
-    background: #2c3e50;
-    height: 10rem;
-    width: 100%;
-    
-}
-.enlace{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    padding: 2rem 5rem;
-   
+.header{
+  background-color: $secundario;
 }
 
-nav ul{
-    float: right;
-    margin-right: 2rem;
-    margin-bottom: 0;
+.header.principal {
+
+  height: 35rem;
+  background-image: url(../../../build/img/fondo2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+
 }
-nav ul li{
-    display: inline-block;
-    line-height: 8rem;
-    margin: 0 .5rem;
+
+@include tablet {
+  .header.principal {
+    height: 50rem;
+  }
 }
-nav ul li a{
-    color: #fff;
+
+.header__navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__link {
+    color: $blanco;
     font-size: 1.8rem;
-    padding: .7rem 1.3rem;
-    border-radius: .3rem;
-    
-}
-li a.active, li a:hover{
-    color: darkgoldenrod;
-    transition: .5s;
-}
-.checkbtn{
-    font-size: 3rem;
-    color: #fff;
-    float: right;
-    line-height: 8rem;
     margin-right: 4rem;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
-}
-.header-imagen{
-    background: url(../../../build/img/fondo.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 60rem;
-    width: 100%;
-}
 
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 2rem;
+    .logo {
+      max-width: 12rem;
     }
-    nav ul li a{
-        font-size: 1.6rem;
-    }
-}
 
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 8rem;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 5rem 0;
-        line-height: 3rem;
-    }
-    nav ul li a{
-        font-size: 2rem;
-    }
-    li a:hover, li a.active{
-        background: none;
-        color: darkgoldenrod;
-    }
-    #check:checked ~ ul{
-        left:0;
-    }
-}
+    
+  }
+
+ 
 
 
-.logo-texto{
-    color: $blanco;
-    font-size: 2.4rem;
+  @include tablet {
+    .header__link {
+
+      font-size: 2.5rem;
+      margin-right: 5rem;
+
+      .logo {
+        max-width: 20rem;
+      }
+
+
+    }
+  }
+
+  .header__link:hover {
+    color: $acento;
+  }
 }
 
-.logo-texto_bold{
-    color: $blanco;
-    font-family: $bold;
-    font-size: 2.4rem;
+.header__titulo-nombre {
+  color: $blanco;
+  text-transform: uppercase;
+  font-size: 3rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
+@include tablet {
+  .header__titulo-nombre {
+    font-size: 5rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.header__titulo-slogan {
+  color: $blanco;
+  text-align: center;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+  font-size: 1.3rem;
+}
+
+@include tablet {
+  .header__titulo-slogan {
+    font-size: 2remrem;
+  }
+}

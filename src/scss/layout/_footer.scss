@@ -1,0 +1,34 @@
+.footer{
+    background-color: $secundario;
+    
+    .container{
+        @include grid(4,1);
+        
+        
+    }
+
+    .footer__column{
+        height: 20rem;
+        padding-top: 5rem;
+
+
+    }
+
+    .footer__copy{
+        height: 22rem;
+        margin-top: 18rem;
+        text-align: center;
+
+    }
+    a,p,li{
+        color: $blanco;
+    }
+    h3{
+        color: $acento;
+        text-align: center;
+    }
+
+    a:hover{
+        color: $acento;
+    }
+}

@@ -1,0 +1,61 @@
+.formulario {
+    
+
+    legend {
+        font-size: 2rem;
+        color: $grisOscuro;
+    }
+
+    label {
+        font-weight: $bold;
+        text-transform: uppercase;
+        display: block;
+    }
+    input:not([type="submit"]), 
+    textarea,
+    select {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: $blanco;
+        border: 1px solid $secundario;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    textarea {
+        height: 20rem;
+    }
+
+  
+    input[type="radio"] {
+        margin: 0;
+        width: auto;
+    }
+    margin: 3rem 0 3rem 0;
+    width: 50rem;
+    
+    .boton{
+        padding: 1rem 5rem  1rem 5rem;
+        width: 100%;
+        border: none;
+        text-transform: uppercase;
+        color: $blanco;
+        background-color: $secundario;
+        border-radius: 1rem;
+    }
+    
+}
+
+h2 {
+    
+    color: $secundario;
+    margin: 2rem 0 0 0;
+}
+
+.formulario__login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

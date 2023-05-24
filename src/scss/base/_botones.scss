@@ -1,0 +1,35 @@
+.boton-amarillo {
+    @include boton($amarillo, inline-block);
+}
+
+.boton-amarillo-block {
+    @include boton($amarillo, inline-block);
+    width: 15rem;
+    height: 5rem;
+    text-transform: capitalize
+}
+
+.boton-verde {
+    @include boton($verde, inline-block);
+    margin: 3rem
+}
+.boton-verde-form {
+    @include boton($verde, inline-block);
+    
+}
+
+.boton-verde-block {
+    @include boton($verde, block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo, inline-block);
+    width: 15rem;
+    height: 5rem;
+}
+
+.boton-verde-block {
+    @include boton($verde, inline-block);
+    width: 15rem;
+    height: 5rem;
+}
