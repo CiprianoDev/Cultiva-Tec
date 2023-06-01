@@ -20,16 +20,16 @@ incluirTemplate('header', true);
 <main>
     <a href="/inicio" class="boton boton-verde">Volver</a>
     <h1 class="administrador__titulo">Crear nueva fruta</h1>
-
-
-    <div class="centrar">
-
     <?php foreach ($errores as $error) : ?>
         <div class="alerta error">
             <?php echo $error ?>
         </div>
 
     <?php endforeach ?>
+
+    <div class="centrar">
+
+    
 
         <form action="/create" class="formulario" method="POST" enctype="multipart/form-data">
             <fieldset>

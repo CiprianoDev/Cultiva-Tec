@@ -1,5 +1,15 @@
 <?php
 require './code/functions/incluirTemplate.php';
+session_start();
+
+$usuario_nombre = "";
+
+
+if (!isset($_SESSION['usuario_nombre'])) {
+    //header('Location: /login');
+} else {
+    $usuario_nombre = $_SESSION['usuario_nombre'];
+}
 incluirTemplate('header');
 $conexion = new \Tec\CultivaTec\classes\Conexion();
 $conexion->conectar();
@@ -155,11 +165,12 @@ $resultado = $conexion->ejecutarConsulta($consulta);
     <section class="seleccionar-frutas">
         <div class="contenedor">
             <?php foreach ($resultado as $fila) { 
+                $id = $fila['idfruta'];
                 $nombre = $fila['nombre'];
                 $imagen = $fila['imagen'];
             ?>
                 <div class="fruta">
-                    <a href="#aguacate">
+                    <a href="/informacion?idfruta= <?php echo $id ?>">
                         <img class="imagen-fruta" src="/code/imagenes/<?php echo $imagen; ?>" alt="Imagen de aguacate">
                         <p class="nombre-fruta"> <?php echo $nombre ?></p>
                     </a>

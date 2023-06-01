@@ -1,0 +1,83 @@
+.informacion-contenedor {
+    background-color: #f5f5f5;
+    padding: 1.25rem;
+    margin: 5rem;
+
+  
+    h2 {
+      font-size: 3rem;
+      color: $secundario;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+  
+    .index {
+      margin-bottom: 1.25rem;
+  
+      h3 {
+        font-size: 2.5rem;
+        color: #555;
+        margin-bottom: 0.625rem;
+        text-align: left;
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+  
+      li.seccion {
+        font-weight: bold;
+      }
+  
+      li {
+        margin-bottom: 0.3125rem;
+      }
+    }
+  
+    .contenido-normas {
+      background-color: #fff;
+      padding: 1.25rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  
+      h4 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 1.25rem;
+      }
+  
+      .norma-informacion {
+        margin-bottom: 1.25rem;
+       
+        h5 {
+          font-size: 1.875rem;
+          color: $negro;
+          margin-bottom: 0.625rem;
+        }
+  
+        p.info-formateada {
+          font-size: 1.75rem;
+          line-height: 1.4;
+          color: #777;
+          margin-bottom: 0.625rem;
+          white-space: pre-line;
+          text-align: justify;
+          width: 80%;
+        }
+      }
+  
+      a {
+        color: #007bff;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  
+  

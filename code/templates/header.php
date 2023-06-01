@@ -21,7 +21,7 @@
             <?php
 
             if ($_SESSION['usuario_nombre']) { ?>
-                <a class="header__link usuario"> Bienvenido <?php echo $_SESSION['usuario_nombre'] ?> </a>
+                <a  href="/inicio" class="header__link usuario"> Bienvenido <?php echo $_SESSION['usuario_nombre'] ?> </a>
             <?php } ?>
             <a href="<?php echo $_SESSION['usuario_nombre'] ? "/logout" : "/login" ?>" class="header__link"> <?php echo $_SESSION['usuario_nombre'] ? "Cerrar Sesion" : "Iniciar Sesion" ?> </a>
         </nav>

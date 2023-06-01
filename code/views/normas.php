@@ -14,8 +14,9 @@ incluirTemplate('header', true);
 $conexion = new \Tec\CultivaTec\classes\Conexion();
 $conexion->conectar();
 $idFruta = $_GET['idfruta'];
+
 $consulta = "SELECT * FROM frutas WHERE idfruta = '$idFruta'";
-$consulta2 = "SELECT * FROM norma";
+$consulta2 = "SELECT * FROM norma WHERE idfruta = '$idFruta'";
 $resultado = $conexion->ejecutarConsulta($consulta);
 $nombreFruta = $resultado[0]['nombre'];
 $normas = $conexion->ejecutarConsulta($consulta2);
@@ -25,7 +26,7 @@ $normas = $conexion->ejecutarConsulta($consulta2);
 <main>
     <h1 class="administrador__titulo">Normas de <?php echo $nombreFruta ?></h1>
     <a href="/inicio" class="boton boton-verde">Volver</a>
-    <a href="/addnorma" class="boton boton-verde">Agregar Una Nueva Norma</a>
+    <a href="/addnorma?idfruta= <?php echo $idFruta ?>" class="boton boton-verde">Agregar Una Nueva Norma</a>
     <table class="frutas">
         <thead>
             <tr>
@@ -44,11 +45,12 @@ $normas = $conexion->ejecutarConsulta($consulta2);
                 <tr>
                     <td><?php echo $id ?></td>
                     <td><?php echo $nombre ?></td>
-                    <td><?php echo $link ?></td>
-                    <td class="opciones">
-                        <a class="boton-amarillo-block" href="">Actualizar</a>
-                        <form action="" method="post">
+                    <td><a href="<?php echo $link ?>" target="_blank">Ir al sitio</a></td>
+                    <td class="opciones"> 
+                        <a class="boton-amarillo-block" href="/updateNorma?idnorma=<?php echo $id ?>">Actualizar</a>
+                        <form action="/borrarNorma" method="post">
                             <input type="hidden" name="delete" value="<?php echo $id ?>">
+                            <input type="hidden" name="idfruta" value="<?php echo $idFruta ?>">
                             <input class="boton-rojo-block" type="submit" value="Eliminar">
                         </form>
                     </td>

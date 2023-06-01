@@ -15,32 +15,51 @@ if (!isset($_SESSION['usuario_nombre'])) {
 
 incluirTemplate('header', true);
 
+$idnorma = $_GET['idnorma'];
+$idfruta = $_GET['idfruta'];
 
-    $idfruta = $_GET['idfruta'];
-    $nombreCorto = $_GET['nombreCorto'];
-    $nombreLargo = $_GET['nombreLargo'];
-    $contenido = $_GET['contenido'];
-    $link = $_GET['link'];
-    $idcaracter = $_GET['idcaracter'];
-    $idcomercio = $_GET['idcomercio'];
-    $errores = isset($_GET['errores']) ? explode(',', $_GET['errores']) : [];
 
-   
 
-$sqlfruta = "SELECT * FROM frutas WHERE idfruta = '$idFruta'";
+
+$sqlnorma = "SELECT * FROM norma WHERE idnorma = '$idnorma'";
 $conexion = new \Tec\CultivaTec\classes\Conexion();
 $conexion->conectar();
 $consulta = "SELECT * FROM comercio";
 $selectComercio = $conexion->ejecutarConsulta($consulta);
 $consulta = "SELECT * FROM caracter";
 $selectCaracter = $conexion->ejecutarConsulta($consulta);
-$fruta = $conexion->ejecutarConsulta($sqlfruta);
+$norma = $conexion->ejecutarConsulta($sqlnorma);
 $conexion->desconectar();
+
+$idnorma = $norma[0]['idnorma'];
+$idfruta = $norma[0]['idfruta'];
+$nombreCorto = $norma[0]['nombreCorto'];
+$nombreLargo = $norma[0]['nombreLargo'];
+$contenido = $norma[0]['contenido'];
+$link = $norma[0]['link'];
+$idcaracter = $norma[0]['idcaracter'];
+$idcomercio = $norma[0]['idcomercio'];
+
+if (empty($nombreCorto)) {
+    
+    $nombreCorto = $_GET['nombreCorto'];
+    $nombreLargo = $_GET['nombreLargo'];
+    $contenido = $_GET['contenido'];
+    $link = $_GET['link'];
+    $idcaracter = $_GET['idcaracter'];
+    $idcomercio = $_GET['idcomercio'];
+    $idnorma = $_GET['idnorma'];
+    $idfruta = $_GET['idfruta'];
+    $errores = isset($_GET['errores']) ? explode(',', $_GET['errores']) : [];
+}
+
+
+
 ?>
 
 <main>
     <a href="/normas?idfruta= <?php echo $idfruta ?>" class="boton boton-verde">Volver</a>
-    <h1 class="administrador__titulo">Agregar Nueva Norma</h1>
+    <h1 class="administrador__titulo">Actualizar Norma</h1>
 
     <?php foreach ($errores as $error) : ?>
         <div class="alerta error">
@@ -53,7 +72,7 @@ $conexion->desconectar();
 
 
 
-        <form action="/agregarNorma" class="formulario" method="POST" enctype="multipart/form-data">
+        <form action="/updateN" class="formulario" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Informacion General</legend>
 
@@ -69,8 +88,8 @@ $conexion->desconectar();
                 <label for="link">link:</label>
                 <input name="link" type="text" id="link" placeholder="ej: http://norma.org" value="<?php echo $link ?>">
 
-                <input type="hidden" name="idfruta" id="idfruta" value="<?php echo $idfruta ?>">
-
+                <input type="hidden" name="idfruta" id="idfruta" value="<?php echo $idfruta?>">
+                <input type="hidden" name="idnorma" id="idnorma" value="<?php echo $idnorma;?>">
 
             </fieldset>
 
@@ -83,8 +102,10 @@ $conexion->desconectar();
                     foreach ($selectCaracter as $fila) {
                         $id = $fila['idcaracter'];
                         $nombre = $fila['tipo'];
-                        echo "<option value='$id'>$nombre</option>";
-                    }
+                    ?>
+
+                        <option <?php echo $id == $idcaracter ? 'selected' : ''; ?> value="<?php echo $id ?>"> <?php echo $nombre ?> </option>
+                    <?php }
 
                     ?>
                 </select>
@@ -101,8 +122,10 @@ $conexion->desconectar();
                     foreach ($selectComercio as $fila) {
                         $id = $fila['idcomercio'];
                         $nombre = $fila['tipocomercio'];
-                        echo "<option value='$id'>$nombre</option>";
-                    }
+                    ?>
+
+                        <option <?php echo $id == $idcomercio ? 'selected' : ''; ?> value="<?php echo $id ?>"> <?php echo $nombre ?> </option>
+                    <?php }
 
                     ?>
                 </select>
@@ -110,7 +133,7 @@ $conexion->desconectar();
 
             </fieldset>
 
-            <input type="submit" value="agregar norma" class="boton boton-verde-form">
+            <input type="submit" value="Actualizar Norma" class="boton boton-verde-form">
         </form>
     </div>
 

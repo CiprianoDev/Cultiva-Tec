@@ -48,9 +48,9 @@ class Fruta {
 
         $conexion->desconectar();
 
-        if($resultado){
+        
             header('location: /inicio?resultado=1');
-        }
+        
     }
 
     public function actualizarEnBaseDeDatos($nombreActual,$nuevoNombre, $nuevaImagen, $id) {

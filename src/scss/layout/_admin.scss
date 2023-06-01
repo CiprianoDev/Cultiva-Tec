@@ -49,3 +49,17 @@ table.frutas{
 .administrador__titulo{
     color: $secundario;
 }
+
+.alerta{
+    color: $blanco;
+    background-color: $verde;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    margin-right: 15rem;
+    margin-left: 15rem;
+}
+
+.error{
+    background-color: rgb(212, 50, 50);
+}
