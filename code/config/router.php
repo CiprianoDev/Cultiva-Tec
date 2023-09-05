@@ -17,6 +17,7 @@ $router->get('/login', function () {
 });
 
 $router->post('/auth', function () {
+
     $usuario_nombre = trim($_POST['usuario_nombre']);
     $usuario_contra = trim($_POST['usuario_contra']);
 

@@ -42,11 +42,14 @@ class Usuario {
 
     public function validarUsuario() {
         $contra_hash = $this->getUsuarioContra();
+        
 
         if ($this->contraCorrecta($contra_hash)) {
+
             session_start();
             $_SESSION['usuario_nombre'] = $this->usuario_nombre;
             echo json_encode("autorizado");
+            exit;
 
         } else {
             echo json_decode("error: No autorizado");

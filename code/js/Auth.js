@@ -9,7 +9,8 @@ class Auth {
             method: 'POST',
             body: datosFormulario
         })
-        .then(res => res.json())
+        .then(res => res.json()    
+        )
         .then(data => {
             if (data === 'error') {
                 console.log("No puedes entrar");

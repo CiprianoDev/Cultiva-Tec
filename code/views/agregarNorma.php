@@ -100,7 +100,7 @@ $conexion->desconectar();
                     <?php
                     foreach ($selectComercio as $fila) {
                         $id = $fila['idcomercio'];
-                        $nombre = $fila['tipocomercio'];
+                        $nombre = $fila['tipo'];
                         echo "<option value='$id'>$nombre</option>";
                     }
 
